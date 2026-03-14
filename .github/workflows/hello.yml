@@ -15,7 +15,7 @@ jobs:
         run: echo "This workflow was triggered by ${{ github.actor }}"
 
   details:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: show all versions
         run: echo "python --version, docker --version"
