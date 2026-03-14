@@ -1,0 +1,14 @@
+name: Hello
+'on':
+  push:
+    branches:
+      - main
+Jobs:
+  Greet:
+     #This is github runner
+    runs-on: ubuntu-latest
+    Steps:
+      - name: Say hello to users
+      - run: echo "Hello Dosto"
+      - name: say hello to username
+      - run: echo "Hello $USER"
