@@ -5,6 +5,10 @@ name: CICD
 on:
   workflow_dispatch:
 
+#only edit when change on this extension file
+path:
+  - "**.html"
+
 jobs:
 
   code:
