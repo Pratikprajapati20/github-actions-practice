@@ -4,11 +4,12 @@ name: Hello
     branches:
       - main
 jobs:
-  Greet:
+  greet:
      #This is github runner
     runs-on: ubuntu-latest
     steps:
-      - name: Say hello to users
-      - run: echo "Hello Dosto"
+      - name: sayhello to users
+        run: echo "Hello dosto"
+      
       - name: say hello to username
-      - run: echo "Hello $USER"
+        run: echo "Hello $USER"
