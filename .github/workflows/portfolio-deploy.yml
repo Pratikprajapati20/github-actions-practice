@@ -1,0 +1,34 @@
+name: portfolio-deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      #Get access to your portfolio code via pre built action
+      #Clone the code from github
+      #Step = 1
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      #Step = 2
+      #Setup Github pages
+      - name: Setup github pages
+        uses: action/configure-pages@v4
+
+      #Step = 3
+      #Static code artifacts
+      - name: Upload static files
+        uses: actions/upload-pages-artifact@v4
+
+      #Step = 4
+      #Deploy to Github pages
+      - name: Deploy to Github pages
+        uses: actions/deploy-pages@v4
