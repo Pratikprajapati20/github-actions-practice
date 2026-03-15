@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Pratik Prajapati | DevOps Engineer</title>
+    <title>Pratik Ando | DevOps Engineer</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -15,13 +14,29 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Poppins;
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
-            background: #0f172a;
             color: white;
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1f1c2c);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
         }
 
         /* NAVBAR */
@@ -30,56 +45,64 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 1000;
         }
 
         nav {
             display: flex;
-            justify-content: space-between;
-            padding: 15px 10%;
+            justify-content: center;
+            padding: 15px;
         }
 
         nav ul {
             display: flex;
-            gap: 30px;
+            gap: 40px;
             list-style: none;
         }
 
         nav a {
-            text-decoration: none;
             color: white;
+            text-decoration: none;
             font-weight: 500;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #38bdf8;
+            color: #00eaff;
+            transform: scale(1.1);
+        }
+
+        /* SECTION */
+
+        section {
+            padding: 120px 10%;
         }
 
         /* HERO */
 
-        .hero {
+        #home {
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 20px;
         }
 
-        .hero h1 {
-            font-size: 60px;
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
+        #home h1 {
+            font-size: 65px;
+            background: linear-gradient(90deg, #00f2ff, #a18cd1);
             -webkit-background-clip: text;
             color: transparent;
         }
 
-        .hero p {
-            margin-top: 10px;
+        #home p {
+            margin-top: 15px;
             font-size: 20px;
-            opacity: .8;
+            opacity: 0.8;
         }
 
         .buttons {
@@ -89,106 +112,119 @@
         }
 
         .btn {
-            padding: 12px 25px;
+            padding: 12px 30px;
             border-radius: 30px;
-            background: #38bdf8;
-            color: black;
             text-decoration: none;
-            font-weight: 600;
-            transition: .3s;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.4s;
         }
 
         .btn:hover {
+            background: #00eaff;
+            color: black;
             transform: translateY(-4px);
         }
 
-        /* SECTION */
+        /* GLASS CARD */
 
-        section {
-            padding: 100px 10%;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        /* CARDS */
-
-        .card {
+        .glass {
             background: rgba(255, 255, 255, 0.05);
-            padding: 30px;
+            backdrop-filter: blur(15px);
             border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 35px;
+            transition: 0.4s;
         }
 
-        /* SKILLS */
+        .glass:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 12px;
+            margin-top: 15px;
         }
 
         .skill {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px 15px;
+            padding: 8px 18px;
             border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            transition: 0.3s;
         }
 
         .skill:hover {
-            background: #38bdf8;
+            background: #00eaff;
             color: black;
+            transform: scale(1.1);
         }
 
         /* PROJECTS */
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
+            margin-top: 40px;
         }
 
-        .project {
-            padding: 25px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            transition: .3s;
+        .project-card h3 {
+            margin-bottom: 10px;
         }
 
-        .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .project a {
-            color: #38bdf8;
+        .project-card a {
+            color: #00eaff;
             text-decoration: none;
         }
 
-        /* BLOG */
+        /* PIPELINE */
 
-        .blog {
-            text-align: center;
+        .pipeline {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .blog a {
-            color: #38bdf8;
-            font-weight: 600;
+        .stage {
+            padding: 15px 25px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         /* CONTACT */
 
-        .contact {
-            text-align: center;
+        .contact-links {
+            margin-top: 15px;
             line-height: 2;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
-            opacity: .6;
+            padding: 40px;
+            opacity: 0.7;
+        }
+
+        @media(max-width:900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -196,34 +232,25 @@
 <body>
 
     <header>
-
         <nav>
-
-            <h3>Pratik</h3>
-
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="#pipeline">DevOps</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-
         </nav>
-
     </header>
 
-    <section class="hero">
+    <section id="home">
 
-        <h1>Pratik Prajapati</h1>
-
-        <p>DevOps Engineer • Software Engineer • CI/CD Specialist</p>
+        <h1>Pratik Ando</h1>
+        <p>DevOps Engineer | Software Engineer | CI/CD Automation Specialist</p>
 
         <div class="buttons">
-
-            <a class="btn" href="#projects">View Projects</a>
-            <a class="btn" href="resume.pdf">Download Resume</a>
-
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#" class="btn">Download Resume</a>
         </div>
 
     </section>
@@ -232,47 +259,41 @@
 
         <h2>About Me</h2>
 
-        <div class="card">
+        <div class="about-grid">
 
-            <p>
+            <div class="glass">
 
-                DevOps and Software Engineer with 7+ years of experience designing scalable applications and building
-                automated infrastructure pipelines.
+                <p>
+                    Software and DevOps engineer with **7+ years of experience** designing scalable systems, automating
+                    infrastructure, and optimizing CI/CD pipelines.
+                </p>
 
-                Experienced in containerization, infrastructure-as-code, CI/CD automation, and cloud-native
-                technologies.
+                <p style="margin-top:10px;">
+                    Experienced in containerization, infrastructure-as-code, and cloud-native architectures.
+                </p>
 
-            </p>
+            </div>
 
-        </div>
+            <div class="glass">
 
-    </section>
+                <h3>Tech Stack</h3>
 
-    <section id="skills">
+                <div class="skills">
 
-        <h2>Technical Skills</h2>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">FastAPI</span>
+                    <span class="skill">Docker</span>
+                    <span class="skill">Kubernetes</span>
+                    <span class="skill">Terraform</span>
+                    <span class="skill">Jenkins</span>
+                    <span class="skill">GitHub Actions</span>
+                    <span class="skill">Linux</span>
+                    <span class="skill">Bash</span>
+                    <span class="skill">CI/CD</span>
+                    <span class="skill">Pandas</span>
 
-        <div class="card">
-
-            <div class="skills">
-
-                <span class="skill">JavaScript</span>
-                <span class="skill">Python</span>
-                <span class="skill">FastAPI</span>
-                <span class="skill">Pandas</span>
-
-                <span class="skill">Docker</span>
-                <span class="skill">Kubernetes</span>
-
-                <span class="skill">Terraform</span>
-
-                <span class="skill">Jenkins</span>
-                <span class="skill">GitHub Actions</span>
-
-                <span class="skill">CI/CD</span>
-
-                <span class="skill">Linux</span>
-                <span class="skill">Bash</span>
+                </div>
 
             </div>
 
@@ -282,73 +303,44 @@
 
     <section id="projects">
 
-        <h2>Projects</h2>
+        <h2>Highlighted Projects</h2>
 
         <div class="projects">
 
-            <div class="project">
-
-                <h3>Dockerized Banking Application</h3>
-
-                <p>
-
-                    Containerized Java Maven banking system with MySQL database and integrated AI features using Ollama
-                    LLM.
-
-                </p>
-
-                <a href="https://github.com/YOUR_GITHUB">View Project →</a>
-
+            <div class="glass project-card">
+                <h3>AI Banking System</h3>
+                <p>Dockerized Java Maven banking application integrated with Ollama LLM and MySQL.</p>
+                <a href="#">View Code →</a>
             </div>
 
-            <div class="project">
-
-                <h3>CI/CD Automation Pipeline</h3>
-
-                <p>
-
-                    Designed and implemented automated CI/CD pipelines using Jenkins and GitHub Actions reducing
-                    deployment time by 40%.
-
-                </p>
-
-                <a href="https://github.com/YOUR_GITHUB">View Code →</a>
-
+            <div class="glass project-card">
+                <h3>CI/CD Automation</h3>
+                <p>Implemented Jenkins and GitHub Actions pipelines reducing deployment time by 40%.</p>
+                <a href="#">View Code →</a>
             </div>
 
-            <div class="project">
-
-                <h3>Terraform Infrastructure Automation</h3>
-
-                <p>
-
-                    Provisioned multi-environment infrastructure (Development, Staging, Production) using Terraform and
-                    Infrastructure as Code practices.
-
-                </p>
-
-                <a href="https://github.com/YOUR_GITHUB">View Code →</a>
-
+            <div class="glass project-card">
+                <h3>Terraform Infrastructure</h3>
+                <p>Provisioned multi-environment infrastructure using Terraform workspaces.</p>
+                <a href="#">View Code →</a>
             </div>
 
         </div>
 
     </section>
 
-    <section id="blog">
+    <section id="pipeline">
 
-        <h2>Technical Blog</h2>
+        <h2>DevOps Pipeline</h2>
 
-        <div class="card blog">
+        <div class="pipeline">
 
-            <p>
-
-                I regularly share DevOps tutorials, CI/CD automation guides, and infrastructure best practices on
-                Hashnode.
-
-            </p>
-
-            <a href="https://hashnode.com/@YOUR_HASHNODE">Read My Articles →</a>
+            <div class="stage">Code</div>
+            <div class="stage">Build</div>
+            <div class="stage">Test</div>
+            <div class="stage">Dockerize</div>
+            <div class="stage">Deploy</div>
+            <div class="stage">Monitor</div>
 
         </div>
 
@@ -358,21 +350,13 @@
 
         <h2>Contact</h2>
 
-        <div class="card contact">
+        <div class="glass">
 
-            <p>Email: your-email@email.com</p>
-
-            <p>GitHub:
-                <a href="https://github.com/YOUR_GITHUB">github.com/YOUR_GITHUB</a>
-            </p>
-
-            <p>LinkedIn:
-                <a href="https://linkedin.com/in/YOUR_LINKEDIN">linkedin.com/in/YOUR_LINKEDIN</a>
-            </p>
-
-            <p>Hashnode:
-                <a href="https://hashnode.com/@YOUR_HASHNODE">hashnode.com/@YOUR_HASHNODE</a>
-            </p>
+            <div class="contact-links">
+                <p>Email: your@email.com</p>
+                <p>GitHub: github.com/pratik</p>
+                <p>LinkedIn: linkedin.com/in/pratik</p>
+            </div>
 
         </div>
 
@@ -380,7 +364,7 @@
 
     <footer>
 
-        © 2026 Pratik Prajapati • DevOps Engineer
+        <p>© 2026 Pratik Ando | DevOps Engineer</p>
 
     </footer>
 
