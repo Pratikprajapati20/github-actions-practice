@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pratik Prajapati| DevOps Engineer</title>
+    <title>Pratik Prajapati | DevOps Engineer</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -15,64 +15,46 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: Poppins;
             scroll-behavior: smooth;
         }
 
         body {
             background: #0f172a;
             color: white;
-            overflow-x: hidden;
-        }
-
-        /* PARTICLE BACKGROUND */
-
-        #particles {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(120deg, #020617, #0f172a, #1e293b);
         }
 
         /* NAVBAR */
 
         header {
             position: fixed;
-            width: 100%;
             top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 1000;
         }
 
         nav {
             display: flex;
-            justify-content: center;
-            padding: 15px;
+            justify-content: space-between;
+            padding: 15px 10%;
         }
 
         nav ul {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             list-style: none;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            transition: .3s;
+            color: white;
+            font-weight: 500;
         }
 
         nav a:hover {
-            color: #22d3ee;
-        }
-
-        /* SECTION */
-
-        section {
-            padding: 120px 10%;
+            color: #38bdf8;
         }
 
         /* HERO */
@@ -84,59 +66,60 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 20px;
         }
 
         .hero h1 {
             font-size: 60px;
-            background: linear-gradient(90deg, #22d3ee, #a78bfa);
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
             -webkit-background-clip: text;
             color: transparent;
         }
 
-        .terminal {
-
-            margin-top: 20px;
-            background: #020617;
-            border-radius: 10px;
-            padding: 20px;
-            width: 500px;
-            max-width: 90%;
-
-            font-family: monospace;
-            text-align: left;
+        .hero p {
+            margin-top: 10px;
+            font-size: 20px;
+            opacity: .8;
         }
 
-        .cursor {
-            display: inline-block;
-            width: 8px;
-            background: white;
-            animation: blink 1s infinite;
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
         }
 
-        @keyframes blink {
-            50% {
-                opacity: 0
-            }
+        .btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            background: #38bdf8;
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
         }
 
-        /* GLASS CARD */
+        .btn:hover {
+            transform: translateY(-4px);
+        }
 
-        .glass {
+        /* SECTION */
 
+        section {
+            padding: 100px 10%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* CARDS */
+
+        .card {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
             padding: 30px;
+            border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: .4s;
-
-        }
-
-        .glass:hover {
-
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, .5);
-
         }
 
         /* SKILLS */
@@ -149,135 +132,97 @@
         }
 
         .skill {
-
-            padding: 8px 16px;
-            border-radius: 20px;
             background: rgba(255, 255, 255, 0.1);
-            transition: .3s;
-
+            padding: 8px 15px;
+            border-radius: 20px;
         }
 
         .skill:hover {
-            background: #22d3ee;
+            background: #38bdf8;
             color: black;
         }
 
         /* PROJECTS */
 
         .projects {
-
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
-            margin-top: 40px;
-
         }
 
-        .project-card {
-
-            background: rgba(255, 255, 255, 0.05);
+        .project {
             padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
-            transition: .4s;
-
+            transition: .3s;
         }
 
-        .project-card:hover {
-
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 0 30px rgba(34, 211, 238, .5);
-
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
-        /* PIPELINE */
-
-        .pipeline {
-
-            margin-top: 50px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-
+        .project a {
+            color: #38bdf8;
+            text-decoration: none;
         }
 
-        .stage {
+        /* BLOG */
 
-            padding: 15px 25px;
-            border-radius: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            position: relative;
-
-            animation: pulse 2s infinite;
-
-        }
-
-        @keyframes pulse {
-
-            0% {
-                transform: scale(1)
-            }
-
-            50% {
-                transform: scale(1.1)
-            }
-
-            100% {
-                transform: scale(1)
-            }
-
-        }
-
-        /* GITHUB GRAPH */
-
-        .github {
-            margin-top: 40px;
+        .blog {
             text-align: center;
+        }
+
+        .blog a {
+            color: #38bdf8;
+            font-weight: 600;
         }
 
         /* CONTACT */
 
         .contact {
-
             text-align: center;
-
+            line-height: 2;
         }
 
         footer {
-
             text-align: center;
-            padding: 40px;
-            opacity: .7;
-
+            padding: 30px;
+            opacity: .6;
         }
     </style>
 </head>
 
 <body>
 
-    <canvas id="particles"></canvas>
-
     <header>
+
         <nav>
 
+            <h3>Pratik</h3>
+
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#pipeline">DevOps</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
         </nav>
+
     </header>
 
-    <section class="hero" id="home">
+    <section class="hero">
 
-        <h1>Pratik Ando</h1>
+        <h1>Pratik Prajapati</h1>
 
-        <div class="terminal">
+        <p>DevOps Engineer • Software Engineer • CI/CD Specialist</p>
 
-            <div id="terminal-text"></div><span class="cursor"></span>
+        <div class="buttons">
+
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn" href="resume.pdf">Download Resume</a>
 
         </div>
 
@@ -287,25 +232,45 @@
 
         <h2>About Me</h2>
 
-        <div class="glass">
+        <div class="card">
 
             <p>
 
-                DevOps and Software Engineer with 7+ years experience building scalable systems,
-                automating CI/CD pipelines, and containerizing applications.
+                DevOps and Software Engineer with 7+ years of experience designing scalable applications and building
+                automated infrastructure pipelines.
+
+                Experienced in containerization, infrastructure-as-code, CI/CD automation, and cloud-native
+                technologies.
 
             </p>
+
+        </div>
+
+    </section>
+
+    <section id="skills">
+
+        <h2>Technical Skills</h2>
+
+        <div class="card">
 
             <div class="skills">
 
                 <span class="skill">JavaScript</span>
                 <span class="skill">Python</span>
                 <span class="skill">FastAPI</span>
+                <span class="skill">Pandas</span>
+
                 <span class="skill">Docker</span>
                 <span class="skill">Kubernetes</span>
+
                 <span class="skill">Terraform</span>
+
                 <span class="skill">Jenkins</span>
                 <span class="skill">GitHub Actions</span>
+
+                <span class="skill">CI/CD</span>
+
                 <span class="skill">Linux</span>
                 <span class="skill">Bash</span>
 
@@ -319,168 +284,105 @@
 
         <h2>Projects</h2>
 
-        <div class="projects" id="projects-container"></div>
+        <div class="projects">
 
-    </section>
+            <div class="project">
 
-    <section id="pipeline">
+                <h3>Dockerized Banking Application</h3>
 
-        <h2>DevOps Pipeline</h2>
+                <p>
 
-        <div class="pipeline">
+                    Containerized Java Maven banking system with MySQL database and integrated AI features using Ollama
+                    LLM.
 
-            <div class="stage">Code</div>
-            <div class="stage">Build</div>
-            <div class="stage">Test</div>
-            <div class="stage">Dockerize</div>
-            <div class="stage">Deploy</div>
-            <div class="stage">Monitor</div>
+                </p>
+
+                <a href="https://github.com/YOUR_GITHUB">View Project →</a>
+
+            </div>
+
+            <div class="project">
+
+                <h3>CI/CD Automation Pipeline</h3>
+
+                <p>
+
+                    Designed and implemented automated CI/CD pipelines using Jenkins and GitHub Actions reducing
+                    deployment time by 40%.
+
+                </p>
+
+                <a href="https://github.com/YOUR_GITHUB">View Code →</a>
+
+            </div>
+
+            <div class="project">
+
+                <h3>Terraform Infrastructure Automation</h3>
+
+                <p>
+
+                    Provisioned multi-environment infrastructure (Development, Staging, Production) using Terraform and
+                    Infrastructure as Code practices.
+
+                </p>
+
+                <a href="https://github.com/YOUR_GITHUB">View Code →</a>
+
+            </div>
 
         </div>
 
     </section>
 
-    <section class="github">
+    <section id="blog">
 
-        <h2>GitHub Activity</h2>
+        <h2>Technical Blog</h2>
 
-        <img src="https://ghchart.rshah.org/YOUR_GITHUB_USERNAME" />
+        <div class="card blog">
+
+            <p>
+
+                I regularly share DevOps tutorials, CI/CD automation guides, and infrastructure best practices on
+                Hashnode.
+
+            </p>
+
+            <a href="https://hashnode.com/@YOUR_HASHNODE">Read My Articles →</a>
+
+        </div>
 
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact">
 
         <h2>Contact</h2>
 
-        <p>Email: your@email.com</p>
-        <p>GitHub: github.com/pratik</p>
-        <p>LinkedIn: linkedin.com/in/pratik</p>
+        <div class="card contact">
+
+            <p>Email: your-email@email.com</p>
+
+            <p>GitHub:
+                <a href="https://github.com/YOUR_GITHUB">github.com/YOUR_GITHUB</a>
+            </p>
+
+            <p>LinkedIn:
+                <a href="https://linkedin.com/in/YOUR_LINKEDIN">linkedin.com/in/YOUR_LINKEDIN</a>
+            </p>
+
+            <p>Hashnode:
+                <a href="https://hashnode.com/@YOUR_HASHNODE">hashnode.com/@YOUR_HASHNODE</a>
+            </p>
+
+        </div>
 
     </section>
 
     <footer>
 
-        © 2026 Pratik Prajapati| DevOps Engineer
+        © 2026 Pratik Prajapati • DevOps Engineer
 
     </footer>
-
-    <script>
-
-        /* TERMINAL TYPING */
-
-        const text = `
-> whoami
-Pratik Ando
-
-> role
-DevOps Engineer | Software Engineer
-
-> skills
-Docker Kubernetes Terraform CI/CD
-`
-
-        let i = 0
-
-        function typing() {
-
-            if (i < text.length) {
-
-                document.getElementById("terminal-text").innerHTML += text.charAt(i)
-
-                i++
-
-                setTimeout(typing, 40)
-
-            }
-
-        }
-
-        typing()
-
-        /* GITHUB PROJECT LOADER */
-
-        async function loadRepos() {
-
-            const res = await fetch("https://api.github.com/users/YOUR_GITHUB_USERNAME/repos")
-
-            const repos = await res.json()
-
-            const container = document.getElementById("projects-container")
-
-            repos.slice(0, 6).forEach(repo => {
-
-                const card = document.createElement("div")
-
-                card.className = "project-card"
-
-                card.innerHTML = `
-
-<h3>${repo.name}</h3>
-
-<p>${repo.description || "No description available"}</p>
-
-<a href="${repo.html_url}" target="_blank">View Repo →</a>
-
-`
-
-                container.appendChild(card)
-
-            })
-
-        }
-
-        loadRepos()
-
-        /* PARTICLE BACKGROUND */
-
-        const canvas = document.getElementById("particles")
-
-        const ctx = canvas.getContext("2d")
-
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
-
-        const particles = []
-
-        for (let i = 0; i < 80; i++) {
-
-            particles.push({
-
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                r: Math.random() * 2
-
-            })
-
-        }
-
-        function animate() {
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-            particles.forEach(p => {
-
-                ctx.beginPath()
-
-                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-
-                ctx.fillStyle = "#22d3ee"
-
-                ctx.fill()
-
-                p.y += 0.3
-
-                if (p.y > canvas.height) p.y = 0
-
-            })
-
-            requestAnimationFrame(animate)
-
-        }
-
-        animate()
-
-    </script>
 
 </body>
 
