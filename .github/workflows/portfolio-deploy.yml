@@ -11,17 +11,21 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
+
     steps:
       #Get access to your portfolio code via pre built action
       #Clone the code from github
       #Step = 1
       - name: checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       #Step = 2
       #Setup Github pages
       - name: Setup github pages
-        uses: action/configure-pages@v4
+        uses: action/configure-pages@v5
 
       #Step = 3
       #Static code artifacts
