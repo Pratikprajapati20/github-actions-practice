@@ -3,16 +3,214 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Viewport meta tag is for responsiveness, though full styling requires CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <!-- In a real project, a CSS file would be linked here: -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Pratik Ando | DevOps Engineer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        /* NAVBAR */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00f2ff;
+            transform: scale(1.1);
+        }
+
+        /* HERO */
+
+        section {
+            padding: 100px 10%;
+        }
+
+        #home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #home h1 {
+            font-size: 60px;
+            background: linear-gradient(90deg, #00f2ff, #6a5cff);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        #home p {
+            margin-top: 15px;
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            text-decoration: none;
+            transition: 0.4s;
+        }
+
+        .btn:hover {
+            background: #00f2ff;
+            color: black;
+            transform: translateY(-3px);
+        }
+
+        /* GLASS CARD */
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            transition: 0.4s;
+        }
+
+        .glass:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ABOUT */
+
+        #about h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .skill {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: #00f2ff;
+            color: black;
+            transform: scale(1.1);
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #00f2ff;
+        }
+
+        /* CONTACT */
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: #00f2ff;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #6a5cff;
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.7;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Navigation Section -->
     <header>
         <nav>
             <ul>
@@ -24,72 +222,93 @@
         </nav>
     </header>
 
-    <!-- Home/Hero Section -->
     <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>A simple showcase of my work and skills.</p>
+        <h1>Pratik Ando</h1>
+        <p>DevOps Engineer | Software Engineer | CI/CD Specialist</p>
+        <a href="#projects" class="btn">View My Work</a>
     </section>
 
-    <!-- About Me Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Introduce yourself and your professional background here. Mention your skills and education.</p>
-        <h3>Skills</h3>
-        <ul>
-            <li>HTML</li>
-            <li>Basic Web Structure</li>
-        </ul>
+
+        <div class="glass">
+
+            <p>
+                DevOps and Software Engineer with 7+ years of experience in software development and infrastructure
+                automation.
+                Specialized in building scalable systems using CI/CD pipelines, containerization, and cloud-native
+                technologies.
+            </p>
+
+            <div class="skills">
+                <span class="skill">JavaScript</span>
+                <span class="skill">Python</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Kubernetes</span>
+                <span class="skill">Terraform</span>
+                <span class="skill">Jenkins</span>
+                <span class="skill">GitHub Actions</span>
+                <span class="skill">FastAPI</span>
+                <span class="skill">CI/CD</span>
+                <span class="skill">Linux</span>
+            </div>
+
+        </div>
+
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Project Name</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Project 1</td>
-                    <td>A brief description of the project.</td>
-                    <td><a href="#">View Project</a></td>
-                </tr>
-                <tr>
-                    <td>Project 2</td>
-                    <td>Another project description.</td>
-                    <td><a href="#">View Project</a></td>
-                </tr>
-            </tbody>
-        </table>
+
+        <h2 style="text-align:center">Projects</h2>
+
+        <div class="projects">
+
+            <div class="glass project-card">
+                <h3>Dockerized Banking Application</h3>
+                <p>Containerized a Java Maven banking system with MySQL and AI integration using Ollama LLM.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+            <div class="glass project-card">
+                <h3>CI/CD Pipeline Automation</h3>
+                <p>Automated build and deployment pipelines using Jenkins and GitHub Actions reducing deployment time by
+                    40%.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+            <div class="glass project-card">
+                <h3>Terraform Infrastructure</h3>
+                <p>Designed multi-environment infrastructure (Dev, Staging, Production) using Terraform.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+        </div>
+
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me via the following methods:</p>
-        <ul>
-            <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-            <li>LinkedIn: <a href="#">Your LinkedIn Profile</a></li>
-            <li>GitHub: <a href="#">Your GitHub Profile</a></li>
-        </ul>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Send</button>
-        </form>
+
+        <h2 style="text-align:center">Contact Me</h2>
+
+        <div class="glass">
+
+            <p>Email: pratik@example.com</p>
+            <p>GitHub: github.com/pratik</p>
+            <p>LinkedIn: linkedin.com/in/pratik</p>
+
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea rows="4" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+
     </section>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <p>© 2026 Pratik Ando | DevOps Engineer</p>
     </footer>
 
 </body>
