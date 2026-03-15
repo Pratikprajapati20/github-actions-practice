@@ -40,3 +40,5 @@ jobs:
       #Deploy to Github pages
       - name: Deploy to Github pages
         uses: actions/deploy-pages@v4
+        with:
+          url: ${{ steps.deploy-pages.outputs.page_url }}
