@@ -20,6 +20,7 @@ This repository shows how developers can:
 ---
 
 # 🏗️ Project Architecture
+```bash
 Developer Push Code
 │
 ▼
@@ -34,6 +35,7 @@ Build & Deploy Process
 ▼
 GitHub Pages Hosting
 
+```
 ---
 
 # ⚙️ Tech Stack
@@ -48,6 +50,7 @@ GitHub Pages Hosting
 
 # 📂 Project Structure
 github-actions-practice
+```bash
 │
 ├── index.html
 ├── style.css
@@ -56,7 +59,7 @@ github-actions-practice
 └── .github
 └── workflows
 └── deploy.yml
-
+```
 
 ### Important Folder
 
