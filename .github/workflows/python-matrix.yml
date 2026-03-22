@@ -6,7 +6,7 @@ on:
 
 jobs:
   validate:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout code
@@ -18,9 +18,7 @@ jobs:
           python-version: "3.10"
 
       - name: Install Dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run Linter
-        run: |
-          flake8 app.py
+        run: flake8 app.py
