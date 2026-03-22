@@ -2,8 +2,7 @@ name: python-matrix lint
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   validate:
