@@ -1,0 +1,17 @@
+name: deploy-flask-app
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploye:
+    environment:
+      DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
+    runs-on: slef-hosted
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: deploy with docker compose
+        run: docker compose up -d --build
