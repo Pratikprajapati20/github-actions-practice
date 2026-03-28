@@ -2,10 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DevOps Zero To Hero - Flask App Deployment" />
     <title>DevOps Zero To Hero</title>
+
     <style>
+        :root {
+            --bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            --primary: #7b2ff7;
+            --accent: #00d2ff;
+            --text: #e0e0e0;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,90 +23,83 @@
 
         body {
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #e0e0e0;
+            display: grid;
+            place-items: center;
+            background: var(--bg);
+            font-family: system-ui, sans-serif;
+            color: var(--text);
         }
 
         .container {
             text-align: center;
+            max-width: 600px;
             padding: 2rem;
-            max-width: 640px;
         }
 
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #00d2ff, #7b2ff7);
+            background: linear-gradient(90deg, var(--accent), var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .badge {
-            display: inline-block;
             margin: 1rem 0 2rem;
-            padding: 0.4rem 1.2rem;
-            border: 1px solid #7b2ff7;
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--primary);
             border-radius: 999px;
-            font-size: 0.9rem;
-            color: #c4b5fd;
-            letter-spacing: 0.05em;
+            font-size: 0.85rem;
         }
 
         .cards {
             display: flex;
             gap: 1rem;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.06);
+            flex: 1 1 150px;
+            padding: 1.2rem;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 1.5rem 1.8rem;
-            min-width: 150px;
-            flex: 1;
         }
 
         .card span {
-            display: block;
             font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #9ca3af;
-            margin-bottom: 0.4rem;
+            color: #aaa;
         }
 
         .card strong {
-            font-size: 1.25rem;
-            color: #f9fafb;
+            display: block;
+            margin-top: 0.3rem;
+            font-size: 1.1rem;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <main class="container">
         <h1>DevOps Zero To Hero</h1>
-        <div class="badge">Josh Batch 10</div>
-        <div class="cards">
+        <div class="badge">Batch 10 • CI/CD Ready</div>
+
+        <section class="cards">
             <div class="card">
                 <span>Framework</span>
                 <strong>Flask 3.1</strong>
             </div>
             <div class="card">
                 <span>Runtime</span>
-                <strong>Python 3.14</strong>
+                <strong>Python 3.x</strong>
             </div>
             <div class="card">
                 <span>Deploy</span>
                 <strong>AWS ECS</strong>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 
 </html>
