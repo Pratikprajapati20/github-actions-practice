@@ -7,7 +7,7 @@ jobs:
   deploye:
     env:
       DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
-    runs-on: gitslef-runner
+    runs-on: [self-hosted, Linux]
 
     steps:
       - name: checkout code
