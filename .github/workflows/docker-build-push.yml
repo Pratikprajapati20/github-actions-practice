@@ -25,5 +25,3 @@ jobs:
           push: true
           tags: |
             ${{varS.DOCKERHUB_USER}}/${{github.repository}}:latest
-            # ${{varS.DOCKERHUB_USER}}/${{github.repository}}:latest
-            # ${{vars.DOCKERHUB_USER}}/${{github.repository}}:${{github.sha]}}
