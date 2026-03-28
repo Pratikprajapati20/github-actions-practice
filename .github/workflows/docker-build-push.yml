@@ -1,4 +1,4 @@
-name: docker-build-push
+name: build-and-push
 
 on:
   push:
@@ -21,9 +21,9 @@ jobs:
       - name: build and push
         uses: docker/build-push-actions@v6
         with:
-          context: .
+          context: ../ .
           push: true
           tags: |
             ${{varS.DOCKERHUB_USER}}/${{github.repository}}:${{guthub:ref}}
-            ${{varS.DOCKERHUB_USER}}/${{github.repository}}:latest
-            ${{vars.DOCKERHUB_USER}}/${{github.repository}}:${{github.sha]}}
+            # ${{varS.DOCKERHUB_USER}}/${{github.repository}}:latest
+            # ${{vars.DOCKERHUB_USER}}/${{github.repository}}:${{github.sha]}}
