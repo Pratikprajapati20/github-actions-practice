@@ -1,0 +1,25 @@
+# Package ya vulnerbilities (Scan)
+#pip-aduit
+
+name: Dependency Scan
+
+on:
+  workflow_call:
+
+jobs:
+  Dependencies-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v4
+
+      - name: setup python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install Pip-audit
+        run: pip install pip-audit
+
+      - name: Dependencies Audit
+        run: pip-audit -r requirements.txt
