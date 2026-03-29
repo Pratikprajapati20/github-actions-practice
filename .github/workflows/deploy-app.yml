@@ -1,7 +1,11 @@
 name: deploy-flask-app
 
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["build-and-push"] #Name of upstream workflow
+    types: [completed]
+    branches:
+      - main
 
 jobs:
   deploye:
