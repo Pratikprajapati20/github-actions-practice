@@ -6,8 +6,10 @@ on:
 
 jobs:
   Deploy:
-    env: DOCKERHUB_USER=${{ vars.DOCKERHUB_USER }}
-      DOCKER_TAG=${{ github.sha }}
+    env:
+      DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
+      DOCKER_TAG: ${{github.sha}}
+
     runs-on: ubuntu-latest
 
     steps:
