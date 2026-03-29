@@ -21,8 +21,8 @@ jobs:
             echo "Installing required packages and folders"
             sudo apt-get update
             sudo apt-get install docker.io docker-compose-v2 -y
+            sudo usermode -aG docker $USER && newgrp docker
             sudo systemctl restart docker
-            sudo usermode -aG $USER && newgrp docker
             mkdir -p devops
 
       - name: Copy the docker compose file
@@ -46,4 +46,4 @@ jobs:
             export DOCKERHUB_USER=${{ vars.DOCKERHUB_USER }}
             export DOCKER_TAG=${{ github.sha }}
             echo ${{secrets.DOCKERHUB_TOKEN}} | docker login -u ${{vars.DOCKERHUB_USER}} --password-stdin
-            cd ~devops && docker compose down && docker compose up -d --build --force-recreate --pull always
+            cd ~devops && sudo docker compose down && sudo docker compose up -d --build --force-recreate --pull always
