@@ -27,7 +27,6 @@ jobs:
             sudo apt-get update
             sudo apt-get install docker.io docker-compose-v2 -y
             sudo usermode -aG docker $USER && newgrp docker
-            sudo systemctl restart docker
             mkdir -p devops
 
       - name: Copy the docker compose file
