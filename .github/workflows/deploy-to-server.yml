@@ -47,9 +47,14 @@ jobs:
 
           script: |
             echo "Running App"
-            export DOCKERHUB_USER=${{vars.DOCKERHUB_USER}} > .env
-            export DOCKER_TAG=${{github.sha}} > .env
+            export DOCKERHUB_USER=${{vars.DOCKERHUB_USER}}
+            export DOCKER_TAG=${{github.sha}}
             echo ${{secrets.DOCKERHUB_TOKEN}} | docker login -u ${{vars.DOCKERHUB_USER}} --password-stdin
-            cd ~devops && sudo docker compose down && sudo docker compose up -d --build --force-recreate --pull always
+            cd ~devops
+
+            echo "DOCKERHUB_USER=$DOCKERHUB_USER" > .env
+            echo "DOCKER_TAG=$DOCKER_TAG" >> .env
+
+            sudo docker compose down && sudo docker compose up -d --build --force-recreate --pull always
 
           envs: DOCKERHUB_USER,DOCKER_TAG
