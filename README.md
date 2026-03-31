@@ -1,10 +1,10 @@
-# 🚀 GitHub Actions CI/CD GitOps Practice
+# 🚀 DevSecOps End-To-End Pipeline Project (Simple Explanation)
 
-This project demonstrates how to automatically **build and deploy a website using GitHub Actions with a GitOps approach**.
+This project demonstrates how to automatically **Code -> Build -> Test -> deploy a website using GitHub Actions with a Github Action approach**.
 
-The website is automatically deployed to **GitHub Pages** whenever code is pushed to the repository.
+The website is automatically deployed to **EC2 Server** whenever code is pushed to the repository.
 
-This project is part of my **DevOps learning journey** to practice CI/CD automation and GitOps workflows.
+This project is part of my **DevOps learning journey** to practice CI/CD automation and DevSecOps workflows.
 
 ---
 
@@ -30,10 +30,16 @@ GitHub Repository
 GitHub Actions Workflow
 │
 ▼
-Build & Deploy Process
+Build & Push to dockerhub
 │
 ▼
-GitHub Pages Hosting
+Test code quality
+│
+▼
+Deploy Process
+│
+▼
+EC2 Hosting
 
 ```
 ---
@@ -42,7 +48,8 @@ GitHub Pages Hosting
 
 - Version Control: **Git & GitHub**
 - CI/CD Tool: **GitHub Actions**
-- Deployment Platform: **GitHub Pages**
+- Code Quality: **flake8**
+- Deployment Platform: **EC2 Instance**
 - Workflow Language: **YAML**
 - Approach: **GitOps**
 
