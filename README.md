@@ -1,4 +1,4 @@
-**🚀 DevSecOps Pipeline for Flask Application**
+# 🚀 DevSecOps Pipeline for Flask Application
 
 This repository demonstrates a complete end-to-end DevSecOps pipeline built for a Python Flask application. The project focuses on integrating security practices at every stage of the CI/CD lifecycle, from code quality checks to deployment on AWS EC2.
 
@@ -12,14 +12,15 @@ Containerization
 Continuous Integration & Continuous Deployment (CI/CD)
 Cloud deployment
 
-**🛠️ Tech Stack**
+# 🛠️ Tech Stack
+
 **Backend:** Python (Flask)
 **CI/CD:** GitHub Actions
 **Containerization:** Docker
 **Cloud:** AWS EC2
 **Web Server:** Gunicorn
 
-**🔐 DevSecOps Pipeline Stages**
+# 🔐 DevSecOps Pipeline Stages
 
 1. Code Quality & Linting
    Uses flake8 to ensure code quality and detect potential issues.
@@ -35,7 +36,7 @@ Cloud deployment
    Automatically deploys the application to AWS EC2.
    Uses Gunicorn as the application server.
 
-**⚙️ CI/CD Workflow**
+# ⚙️ CI/CD Workflow**
 
 The pipeline is fully automated using GitHub Actions:
 
@@ -46,7 +47,7 @@ Scans image for vulnerabilities
 Pushes image to Docker Hub
 Deploys application to EC2 instance
 
-**🔑 Environment Variables**
+# 🔑 Environment Variables
 
 Make sure to configure the following secrets in your GitHub repository:
 
@@ -56,20 +57,21 @@ AWS_EC2_HOST
 AWS_EC2_USER
 AWS_SSH_KEY
 
-**🚀 How to Run Locally**
-# Clone the repository
+# 🚀 How to Run Locally
+
+**Clone the repository**
 git clone https://github.com/Pratikprajapati20/github-actions-practice.git
 
 
-# Navigate to project directory
+**Navigate to project directory**
 cd github-actions-practice
 
 
-# Build Docker image
+**Build Docker image**
 docker build -t flask-devsecops .
 
 
-# Run container
+**Run container**
 docker run -p 5000:5000 flask-devsecops
 
 **📊 Key Learnings**
