@@ -47,29 +47,16 @@ Scans image for vulnerabilities
 Pushes image to Docker Hub
 Deploys application to EC2 instance
 
-# 🔑 Environment Variables
-
-Make sure to configure the following secrets in your GitHub repository:
-
-DOCKER_USERNAME
-DOCKER_PASSWORD
-AWS_EC2_HOST
-AWS_EC2_USER
-AWS_SSH_KEY
-
 # 🚀 How to Run Locally
 
 **Clone the repository**
 git clone https://github.com/Pratikprajapati20/github-actions-practice.git
 
-
 **Navigate to project directory**
 cd github-actions-practice
 
-
 **Build Docker image**
 docker build -t flask-devsecops .
-
 
 **Run container**
 docker run -p 5000:5000 flask-devsecops
@@ -80,8 +67,3 @@ Managing environment variables securely is crucial
 CI/CD pipelines require proper permission handling
 Automated deployments improve consistency and reliability
 
-**🙏 Acknowledgment**
-
-Special thanks to my mentor Shubham Londhe for guidance and support throughout this project.
-
-⭐ If you found this project helpful, don’t forget to give it a star!
